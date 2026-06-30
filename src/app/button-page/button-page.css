@@ -43,7 +43,7 @@
   flex: 0 0 320px; 
   background: rgba(255, 255, 255, 0.55); 
   backdrop-filter: blur(5px);
-  padding: 2.5rem 1.25rem 1.5rem 1.25rem;
+  padding: 3rem 2rem;
   box-sizing: border-box;
   scroll-snap-align: center;
   cursor: pointer;
@@ -62,7 +62,7 @@
 .polaroid-card.is-active {
   opacity: 1;
   transform: scale(1.15); /* Increases size by 15% relative to normal, making it prominently larger */
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7); /* Deep dramatic shadow to lift it forward */
   z-index: 10; /* Ensures the larger selected card stays layered on top of adjacent cards */
 }
@@ -70,7 +70,7 @@
 /* Photo Container Constraint */
 .image-inner {
   width: 100%;
-  height: 220px;
+  height: 300px;
   background-color: #1a1a1a;
   overflow: hidden;
 }
