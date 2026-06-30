@@ -87,14 +87,12 @@
   color: #ebebeb;
   text-align: center;
   padding: 1rem 0.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  width: 100%;
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.95rem;
   letter-spacing: 1px;
-}
-
-.inner-label p {
-  margin: 0;
+  box-sizing: border-box;
 }
 
 /* Ornamental Mount Rivets / Mechanical Pins */
@@ -137,4 +135,26 @@
   margin: 0;
   letter-spacing: 0.2px;
   text-align: justify;
+}
+
+/* KIOSK FLASH-CLICK TRANSITION */
+.polaroid-card.clicked-flash {
+  animation: dynamicPulse 0.2s ease-out forwards;
+  z-index: 99; /* Forces card forward over other elements during execution */
+}
+
+@keyframes dynamicPulse {
+  0% {
+    transform: scale(1.15);
+    filter: brightness(1);
+  }
+  40% {
+    transform: scale(0.95); /* Quickly shrinks layout down */
+    filter: brightness(1.7); /* Explodes into a vibrant flash */
+    box-shadow: 0 5px 25px rgba(255, 204, 0, 0.7); /* Golden highlight burst */
+  }
+  100% {
+    transform: scale(1.0);
+    filter: brightness(1.2);
+  }
 }

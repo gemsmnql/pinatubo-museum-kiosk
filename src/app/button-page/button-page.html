@@ -1,11 +1,12 @@
 <div class="layout-container">
   
   <div #sliderTrack class="slider-track" (scroll)="onTrackScroll($event)">
+    
     <div 
       *ngFor="let slide of slides; let i = index" 
       class="polaroid-card"
       [ngClass]="{'is-active': i === activeIndex}"
-      (click)="setActiveCard(i, $event)"
+      (click)="setActiveCard(i, slide.route, $event)"
     >
       <div class="pin top-l"></div>
       <div class="pin top-r"></div>
@@ -15,12 +16,13 @@
       </div>
       
       <div class="inner-label">
-        <p>{{ slide.title }}</p>
+        {{ slide.title }}
       </div>
 
       <div class="pin bot-l"></div>
       <div class="pin bot-r"></div>
     </div>
+
   </div>
 
   <div class="caption-block">
